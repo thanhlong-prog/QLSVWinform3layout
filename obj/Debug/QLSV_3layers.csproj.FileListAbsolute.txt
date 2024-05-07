@@ -1,0 +1,14 @@
+D:\C#\QLSV_3layers\bin\Debug\QLSV_3layers.exe.config
+D:\C#\QLSV_3layers\bin\Debug\QLSV_3layers.exe
+D:\C#\QLSV_3layers\bin\Debug\QLSV_3layers.pdb
+D:\C#\QLSV_3layers\obj\Debug\QLSV_3layers.csproj.AssemblyReference.cache
+D:\C#\QLSV_3layers\obj\Debug\QLSV_3layers.frmMain.resources
+D:\C#\QLSV_3layers\obj\Debug\QLSV_3layers.Properties.Resources.resources
+D:\C#\QLSV_3layers\obj\Debug\QLSV_3layers.csproj.GenerateResource.cache
+D:\C#\QLSV_3layers\obj\Debug\QLSV_3layers.csproj.CoreCompileInputs.cache
+D:\C#\QLSV_3layers\obj\Debug\QLSV_3layers.exe
+D:\C#\QLSV_3layers\obj\Debug\QLSV_3layers.pdb
+D:\C#\QLSV_3layers\obj\Debug\QLSV_3layers.frmDSSV.resources
+D:\C#\QLSV_3layers\obj\Debug\QLSV_3layers.frmSinhVien.resources
+D:\C#\QLSV_3layers\obj\Debug\QLSV_3layers.frmDSGV.resources
+D:\C#\QLSV_3layers\obj\Debug\QLSV_3layers.frmGV.resources
