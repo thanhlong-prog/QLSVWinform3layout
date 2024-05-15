@@ -48,5 +48,16 @@ namespace QLSV_3layers
         {
             loadDSLop();
         }
+
+        private void dgvKQHT_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                var malop = dgvKQHT.Rows[e.RowIndex].Cells["malophoc"].Value.ToString();
+                new frmDSSVLopHoc(malop).ShowDialog();
+                //MessageBox.Show(malop);
+                loadDSLop() ;
+            }
+        }
     }
 }

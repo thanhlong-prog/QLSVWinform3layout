@@ -38,3 +38,5 @@ D:\C#\QLSVWinform3layout\obj\Debug\QLSV_3layers.frmDSMHDaDK.resources
 D:\C#\QLSVWinform3layout\obj\Debug\QLSV_3layers.frmKetQuaHocTap.resources
 D:\C#\QLSVWinform3layout\obj\Debug\QLSV_3layers.frmQuanLyLop.resources
 D:\C#\QLSVWinform3layout\obj\Debug\QLSV_3layers.frmDoiMatkhau.resources
+D:\C#\QLSVWinform3layout\obj\Debug\QLSV_3layers.frmDSSVLopHoc.resources
+D:\C#\QLSVWinform3layout\obj\Debug\QLSV_3layers.frmDiemSV.resources

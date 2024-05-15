@@ -60,6 +60,12 @@
     <Compile Include="frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDiemSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDiemSV.Designer.cs">
+      <DependentUpon>frmDiemSV.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDoiMatkhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,12 @@
     </Compile>
     <Compile Include="frmDSSV.Designer.cs">
       <DependentUpon>frmDSSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDSSVLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDSSVLopHoc.Designer.cs">
+      <DependentUpon>frmDSSVLopHoc.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGV.cs">
       <SubType>Form</SubType>
@@ -158,6 +170,9 @@
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDiemSV.resx">
+      <DependentUpon>frmDiemSV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDoiMatkhau.resx">
       <DependentUpon>frmDoiMatkhau.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDSSV.resx">
       <DependentUpon>frmDSSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDSSVLopHoc.resx">
+      <DependentUpon>frmDSSVLopHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGV.resx">
       <DependentUpon>frmGV.cs</DependentUpon>
