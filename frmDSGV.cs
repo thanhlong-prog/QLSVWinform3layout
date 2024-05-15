@@ -62,6 +62,33 @@ namespace QLSV_3layers
             }
         }
 
-
+        private void dgvDSGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex >= 0 ) 
+            {
+                if(e.ColumnIndex == dgvDSGV.Columns["btnDelete"].Index)
+                {
+                    if(MessageBox.Show("Bạn có muốn xóa giáo viên : " + dgvDSGV.Rows[e.RowIndex].Cells["hoten"].Value.ToString() + "?","Xác nhận xóa",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        var maGV = dgvDSGV.Rows[e.RowIndex].Cells["magiaovien"].Value.ToString();
+                        //MessageBox.Show(maGV);
+                        var sql = "deleteGV";
+                        var lstPara = new List<CustomParameter>()
+                        {
+                            new CustomParameter
+                            {
+                                key = "@magiaovien",
+                                value = maGV,
+                            }
+                        };
+                        new Database().Execute(sql, lstPara);
+                        
+                        MessageBox.Show("Xóa giáo viên thành công");
+                       
+                        LoadDSGV();
+                    }
+                }
+            }
+        }
     }
 }
