@@ -38,6 +38,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(690, 54);
             this.label1.Name = "label1";
@@ -47,6 +48,7 @@
             // 
             // txtTukhoa
             // 
+            this.txtTukhoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTukhoa.Location = new System.Drawing.Point(765, 51);
             this.txtTukhoa.Name = "txtTukhoa";
             this.txtTukhoa.Size = new System.Drawing.Size(265, 26);
@@ -54,6 +56,7 @@
             // 
             // btnTimkiem
             // 
+            this.btnTimkiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTimkiem.Location = new System.Drawing.Point(1061, 46);
             this.btnTimkiem.Name = "btnTimkiem";
             this.btnTimkiem.Size = new System.Drawing.Size(101, 36);
@@ -64,6 +67,7 @@
             // 
             // btnThemmoi
             // 
+            this.btnThemmoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThemmoi.Location = new System.Drawing.Point(1168, 46);
             this.btnThemmoi.Name = "btnThemmoi";
             this.btnThemmoi.Size = new System.Drawing.Size(104, 36);
@@ -76,9 +80,11 @@
             // 
             this.dgvDSGV.AllowUserToAddRows = false;
             this.dgvDSGV.AllowUserToDeleteRows = false;
+            this.dgvDSGV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDSGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDSGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDSGV.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvDSGV.Location = new System.Drawing.Point(0, 138);
             this.dgvDSGV.MultiSelect = false;
             this.dgvDSGV.Name = "dgvDSGV";
@@ -102,7 +108,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmDSGV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDSGV";
+            this.Text = "Danh sách giáo viên";
             this.Load += new System.EventHandler(this.frmDSGV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSGV)).EndInit();
             this.ResumeLayout(false);

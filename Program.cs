@@ -16,7 +16,7 @@ namespace QLSV_3layers
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDSGV());
+            Application.Run(new frmMain());
         }
     }
 }

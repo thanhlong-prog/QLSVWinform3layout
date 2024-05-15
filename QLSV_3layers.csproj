@@ -48,11 +48,47 @@
   <ItemGroup>
     <Compile Include="CustomParameter.cs" />
     <Compile Include="Database.cs" />
+    <Compile Include="frmDangKiMonHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangKiMonHoc.Designer.cs">
+      <DependentUpon>frmDangKiMonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDSDiemThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDSDiemThi.Designer.cs">
+      <DependentUpon>frmDSDiemThi.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDSGV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDSGV.Designer.cs">
       <DependentUpon>frmDSGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDSLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDSLopHoc.Designer.cs">
+      <DependentUpon>frmDSLopHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDSMH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDSMH.Designer.cs">
+      <DependentUpon>frmDSMH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDSMHDaDK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDSMHDaDK.Designer.cs">
+      <DependentUpon>frmDSMHDaDK.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDSSV.cs">
       <SubType>Form</SubType>
@@ -66,11 +102,35 @@
     <Compile Include="frmGV.Designer.cs">
       <DependentUpon>frmGV.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmKetQuaHocTap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKetQuaHocTap.Designer.cs">
+      <DependentUpon>frmKetQuaHocTap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLopHoc.Designer.cs">
+      <DependentUpon>frmLopHoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMonHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMonHoc.Designer.cs">
+      <DependentUpon>frmMonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanLyLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLyLop.Designer.cs">
+      <DependentUpon>frmQuanLyLop.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSinhVien.cs">
       <SubType>Form</SubType>
@@ -78,10 +138,34 @@
     <Compile Include="frmSinhVien.Designer.cs">
       <DependentUpon>frmSinhVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmWelcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWelcome.Designer.cs">
+      <DependentUpon>frmWelcome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmDangKiMonHoc.resx">
+      <DependentUpon>frmDangKiMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDSDiemThi.resx">
+      <DependentUpon>frmDSDiemThi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDSGV.resx">
       <DependentUpon>frmDSGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDSLopHoc.resx">
+      <DependentUpon>frmDSLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDSMH.resx">
+      <DependentUpon>frmDSMH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDSMHDaDK.resx">
+      <DependentUpon>frmDSMHDaDK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDSSV.resx">
       <DependentUpon>frmDSSV.cs</DependentUpon>
@@ -89,11 +173,26 @@
     <EmbeddedResource Include="frmGV.resx">
       <DependentUpon>frmGV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmKetQuaHocTap.resx">
+      <DependentUpon>frmKetQuaHocTap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLopHoc.resx">
+      <DependentUpon>frmLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMonHoc.resx">
+      <DependentUpon>frmMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLyLop.resx">
+      <DependentUpon>frmQuanLyLop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSinhVien.resx">
       <DependentUpon>frmSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWelcome.resx">
+      <DependentUpon>frmWelcome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -103,6 +202,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -116,6 +216,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\myimage.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
