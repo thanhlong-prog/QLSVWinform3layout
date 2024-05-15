@@ -66,19 +66,20 @@
             this.doiMatKhauToolStripMenuItem,
             this.thoatToolStripMenuItem});
             this.hệToolStripMenuItem.Name = "hệToolStripMenuItem";
-            this.hệToolStripMenuItem.Size = new System.Drawing.Size(108, 32);
+            this.hệToolStripMenuItem.Size = new System.Drawing.Size(108, 29);
             this.hệToolStripMenuItem.Text = "Hệ thống ";
             // 
             // doiMatKhauToolStripMenuItem
             // 
             this.doiMatKhauToolStripMenuItem.Name = "doiMatKhauToolStripMenuItem";
-            this.doiMatKhauToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
+            this.doiMatKhauToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.doiMatKhauToolStripMenuItem.Text = "Đổi mật khẩu ";
+            this.doiMatKhauToolStripMenuItem.Click += new System.EventHandler(this.doiMatKhauToolStripMenuItem_Click);
             // 
             // thoatToolStripMenuItem
             // 
             this.thoatToolStripMenuItem.Name = "thoatToolStripMenuItem";
-            this.thoatToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
+            this.thoatToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.thoatToolStripMenuItem.Text = "Thoát";
             this.thoatToolStripMenuItem.Click += new System.EventHandler(this.thoatToolStripMenuItem_Click);
             // 
@@ -90,7 +91,7 @@
             this.giaoVienToolStripMenuItem,
             this.lopHocToolStripMenuItem});
             this.quanLyToolStripMenuItem.Name = "quanLyToolStripMenuItem";
-            this.quanLyToolStripMenuItem.Size = new System.Drawing.Size(89, 32);
+            this.quanLyToolStripMenuItem.Size = new System.Drawing.Size(89, 29);
             this.quanLyToolStripMenuItem.Text = "Quản lý";
             // 
             // sinhVienToolStripMenuItem
@@ -127,7 +128,7 @@
             this.dangKiMonHocToolStripMenuItem,
             this.traCuuDiemToolStripMenuItem});
             this.chucNangToolStripMenuItem.Name = "chucNangToolStripMenuItem";
-            this.chucNangToolStripMenuItem.Size = new System.Drawing.Size(113, 32);
+            this.chucNangToolStripMenuItem.Size = new System.Drawing.Size(113, 29);
             this.chucNangToolStripMenuItem.Text = "Chức năng";
             // 
             // dangKiMonHocToolStripMenuItem

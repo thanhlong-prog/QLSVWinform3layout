@@ -5,6 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Net.Mail;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,10 +16,58 @@ namespace QLSV_3layers
     public partial class frmSinhVien : Form
     {
         private string msv;
+        private string matkhaukhoitao = "";
         public frmSinhVien(string msv)
         {
             this.msv = msv;
             InitializeComponent();
+        }
+
+        private void GenerateRandomPassword()
+        {
+            Random random = new Random();
+            int randomNumber = random.Next(100000, 1000000); 
+            matkhaukhoitao = randomNumber.ToString();
+        }
+
+        private string CreatePass(string input)
+        {
+            using (MD5 md5 = MD5.Create())
+            {
+                byte[] inputBytes = Encoding.UTF8.GetBytes(input);
+                byte[] hashBytes = md5.ComputeHash(inputBytes);
+
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < hashBytes.Length; i++)
+                {
+                    sb.Append(hashBytes[i].ToString("x2"));
+                }
+                return sb.ToString();
+            }
+        }
+
+        private void SendEmail(string toAddress, string subject, string body)
+        {
+            string fromAddress = "thanhlongtivip@gmail.com";
+            string fromPassword = "vqwq rlal trmz ggwq";
+
+            MailMessage message = new MailMessage(fromAddress, toAddress);
+            message.Subject = subject;
+            message.Body = body;
+            SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);
+            smtpClient.EnableSsl = true;
+            smtpClient.UseDefaultCredentials = false;
+            smtpClient.Credentials = new System.Net.NetworkCredential(fromAddress, fromPassword);
+
+            try
+            {
+                smtpClient.Send(message);
+                MessageBox.Show("Email gửi mật khẩu cho sinh viên thành công.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi khi gửi email: " + ex.Message);
+            }
         }
 
         private void frmSinhVien_Load(object sender, EventArgs e)
@@ -78,7 +128,13 @@ namespace QLSV_3layers
             if(string.IsNullOrEmpty(msv)) 
             {
                 sql = "ThemMoiSV";
-               
+                GenerateRandomPassword();
+                string tmpPassword = CreatePass(matkhaukhoitao);
+                lstPara.Add(new CustomParameter()
+                {
+                    key = "@matkhaukhoitao",
+                    value = tmpPassword,
+                });
             }
             else
             {
@@ -137,8 +193,13 @@ namespace QLSV_3layers
             var rs = new Database().Execute(sql, lstPara);
             if(rs == 1)
             {
-                if(string.IsNullOrEmpty(sql))
+                if(sql.Equals("ThemMoiSV"))
                 {
+                    var newStudentID = new Database().Select("hocsinhmoiMSSV");
+                    string toAddress = "thanhtyu147@gmail.com";
+                    string subject = "Mật khẩu mới cho sinh viên";
+                    string body = "Mã sinh viên mới: " + newStudentID["mssvmoi"].ToString() + "\nMật khẩu mới của sinh viên là: " + matkhaukhoitao;
+                    SendEmail(toAddress, subject, body);
                     MessageBox.Show("Thêm mới sinh viên thành công");
                 }
                 else

@@ -107,5 +107,10 @@ namespace QLSV_3layers
             var f = new frmQuanLyLop(taikhoan);
             addForm(f);
         }
+
+        private void doiMatKhauToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
