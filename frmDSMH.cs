@@ -57,5 +57,34 @@ namespace QLSV_3layers
             tukhoa = txtTimkiem.Text;
             loadDSMH();
         }
+
+        private void dgvDSMH_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (e.ColumnIndex == dgvDSMH.Columns["btnDelete"].Index)
+                {
+                    if (MessageBox.Show("Bạn có muốn xóa môn học : " + dgvDSMH.Rows[e.RowIndex].Cells["tenmonhoc"].Value.ToString() + "?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        var maMH = dgvDSMH.Rows[e.RowIndex].Cells["mamonhoc"].Value.ToString();
+                        //MessageBox.Show(maMH);
+                        var sql = "deleteMH";
+                        var lstPara = new List<CustomParameter>()
+                        {
+                            new CustomParameter
+                            {
+                                key = "@mamonhoc",
+                                value = maMH,
+                            }
+                        };
+                        new Database().Execute(sql, lstPara);
+
+                        MessageBox.Show("Xóa môn học thành công");
+
+                        loadDSMH();
+                    }
+                }
+            }
+        }
     }
 }

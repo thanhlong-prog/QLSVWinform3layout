@@ -32,6 +32,9 @@ namespace QLSV_3layers
                 value = tukhoa
             });
             dgvLopHoc.DataSource = new Database().SelectData(sql, lstPara);
+            dgvLopHoc.Columns["malophoc"].HeaderText = "Mã lớp học";
+            dgvLopHoc.Columns["gv"].HeaderText = "Giáo viên";
+            dgvLopHoc.Columns["tenmonhoc"].HeaderText = "Tên môn học";
         }
 
         private void btnTimkiem_Click(object sender, EventArgs e)
@@ -52,6 +55,35 @@ namespace QLSV_3layers
             {
                 new frmLopHoc(dgvLopHoc.Rows[e.RowIndex].Cells["malophoc"].Value.ToString()).ShowDialog();
                 loadDSLH() ;    
+            }
+        }
+
+        private void dgvLopHoc_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (e.ColumnIndex == dgvLopHoc.Columns["btnDelete"].Index)
+                {
+                    if (MessageBox.Show("Bạn có muốn xóa lớp học " + dgvLopHoc.Rows[e.RowIndex].Cells["tenmonhoc"].Value.ToString() + "?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        var maLH = dgvLopHoc.Rows[e.RowIndex].Cells["malophoc"].Value.ToString();
+                        //MessageBox.Show(maLH);
+                        var sql = "deleteLH";
+                        var lstPara = new List<CustomParameter>()
+                        {
+                            new CustomParameter
+                            {
+                                key = "@malophoc",
+                                value = maLH,
+                            }
+                        };
+                        new Database().Execute(sql, lstPara);
+
+                        MessageBox.Show("Xóa lớp học thành công");
+
+                        loadDSLH();
+                    }
+                }
             }
         }
     }
