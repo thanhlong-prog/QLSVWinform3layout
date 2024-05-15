@@ -47,6 +47,8 @@
             this.rbtNu = new System.Windows.Forms.RadioButton();
             this.btnLuu = new System.Windows.Forms.Button();
             this.bntHuy = new System.Windows.Forms.Button();
+            this.txtDLMK = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -212,12 +214,32 @@
             this.bntHuy.TabIndex = 20;
             this.bntHuy.Text = "Hủy";
             this.bntHuy.UseVisualStyleBackColor = true;
+            this.bntHuy.Click += new System.EventHandler(this.bntHuy_Click);
+            // 
+            // txtDLMK
+            // 
+            this.txtDLMK.Location = new System.Drawing.Point(202, 538);
+            this.txtDLMK.Name = "txtDLMK";
+            this.txtDLMK.Size = new System.Drawing.Size(387, 26);
+            this.txtDLMK.TabIndex = 26;
+            this.txtDLMK.UseSystemPasswordChar = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(39, 544);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(124, 20);
+            this.label10.TabIndex = 25;
+            this.label10.Text = "Đặt lại mật khẩu";
             // 
             // frmGV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(716, 719);
+            this.Controls.Add(this.txtDLMK);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.bntHuy);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.rbtNu);
@@ -267,5 +289,7 @@
         private System.Windows.Forms.RadioButton rbtNu;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button bntHuy;
+        private System.Windows.Forms.TextBox txtDLMK;
+        private System.Windows.Forms.Label label10;
     }
 }

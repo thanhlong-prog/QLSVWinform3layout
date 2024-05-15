@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Net.Mail;
+using System.Reflection.Emit;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -75,6 +76,8 @@ namespace QLSV_3layers
             if(string.IsNullOrEmpty(msv)) 
             {
                 this.Text = "Thêm mới sinh viên";
+                txtDLMK.Visible = false;
+                label10.Visible = false;
             }
             else 
             {
@@ -144,6 +147,21 @@ namespace QLSV_3layers
                     key = "@masinhvien",
                     value = msv,
                 });
+                if(!string.IsNullOrEmpty(txtDLMK.Text))
+                {
+                    List<CustomParameter> lst = new List<CustomParameter>();
+                    lst.Add(new CustomParameter()
+                    {
+                        key = "@matkhau",
+                        value = CreatePass(txtDLMK.Text),
+                    });
+                    lst.Add(new CustomParameter()
+                    {
+                        key = "@taikhoan",
+                        value = msv,
+                    });
+                    new Database().Execute("updateMKSinhVien", lst);
+                }
             }
             lstPara.Add(new CustomParameter()
             {
@@ -193,7 +211,7 @@ namespace QLSV_3layers
             var rs = new Database().Execute(sql, lstPara);
             if(rs == 1)
             {
-                if(sql.Equals("ThemMoiSV"))
+                if(string.IsNullOrEmpty(msv))
                 {
                     var newStudentID = new Database().Select("hocsinhmoiMSSV");
                     string toAddress = "thanhtyu147@gmail.com";
@@ -212,6 +230,11 @@ namespace QLSV_3layers
             {
                 MessageBox.Show("Thực thi thất bại");
             }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

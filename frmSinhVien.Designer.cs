@@ -49,6 +49,8 @@
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.mtbNgaysinh = new System.Windows.Forms.MaskedTextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtDLMK = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -206,7 +208,7 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(202, 575);
+            this.btnLuu.Location = new System.Drawing.Point(197, 604);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(91, 42);
             this.btnLuu.TabIndex = 20;
@@ -216,12 +218,13 @@
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(427, 575);
+            this.btnHuy.Location = new System.Drawing.Point(422, 604);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(96, 42);
             this.btnHuy.TabIndex = 21;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // mtbNgaysinh
             // 
@@ -232,11 +235,30 @@
             this.mtbNgaysinh.TabIndex = 22;
             this.mtbNgaysinh.ValidatingType = typeof(System.DateTime);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(96, 529);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(124, 20);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Đặt lại mật khẩu";
+            // 
+            // txtDLMK
+            // 
+            this.txtDLMK.Location = new System.Drawing.Point(259, 523);
+            this.txtDLMK.Name = "txtDLMK";
+            this.txtDLMK.Size = new System.Drawing.Size(350, 26);
+            this.txtDLMK.TabIndex = 24;
+            this.txtDLMK.UseSystemPasswordChar = true;
+            // 
             // frmSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(724, 703);
+            this.Controls.Add(this.txtDLMK);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.mtbNgaysinh);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnLuu);
@@ -290,5 +312,7 @@
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.MaskedTextBox mtbNgaysinh;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtDLMK;
     }
 }

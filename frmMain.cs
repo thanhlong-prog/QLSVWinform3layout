@@ -110,7 +110,7 @@ namespace QLSV_3layers
 
         private void doiMatKhauToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            new frmDoiMatkhau(loaitk, taikhoan).ShowDialog();
         }
     }
 }
